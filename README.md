@@ -1,10 +1,14 @@
-Project-005 : Hangman Game (JS-005)
+#Project-005 : Hangman Game (JS-005)
+
 Description
+
 Project aims to create a hangman game.
 
 Problem Statement
+
 Your company has recently started on a project that aims to create a hangman game. So you and your colleagues have started to work on the project.
 Project Skeleton
+
 005-hangman-game(folder)
 |
 |----readme.md         # Given to the students (Definition of the project)          
