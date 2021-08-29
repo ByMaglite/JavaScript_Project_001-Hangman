@@ -9,11 +9,11 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['clarusway','galatasaray','fullstack','devolopment','wonderfull','football','basketball','snake','snapshot','zucchini'];
+const words = ['clarusway','galatasaray','fullstack','devolopment','wonderfull','football','basketball','snake','snapshot'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const corerectLetters = [];
+const correctLetters = [];
 const wrongLetters = [];
 
 // show hidden word
