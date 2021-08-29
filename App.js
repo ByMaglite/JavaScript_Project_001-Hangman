@@ -92,7 +92,7 @@ window.addEventListener('keydown', e => {
 
                 displayWord();
             } else {
-                showNotification()
+                showNotification();
             }
         } else {
             if (!wrongLetters.includes(letter)) {
@@ -117,6 +117,7 @@ playAgainBtn.addEventListener('click',()=>{
     selectedWord = words[Math.floor(Math.random() * words.length)];
 
     displayWord();
+    
     updateWrongLetterE1();
 
     popup.style.display = 'none';
