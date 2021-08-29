@@ -34,7 +34,7 @@ function displayWord() {
     const innerWord = wordE1.innerText.replace(/\n/g, '');
 
     if (innerWord === selectedWord) {
-        finalMessage.innerText = 'Congratulations! You won!';
+        finalMessage.innerText = 'Congratulations! You won! :)';
         popup.style.display = 'flex';
     }
 }
@@ -64,7 +64,7 @@ function updateWrongLetterE1() {
     // Check if lost
 
     if (wrongLetters.length === figureParts.length) {
-        finalMessage.innerText = 'Unfortunately you lost.';
+        finalMessage.innerText = 'Unfortunately you lost.:(';
         popup.style.display = 'flex';
     }
 }
