@@ -19,18 +19,7 @@ const wrongLetters = [];
 // show hidden word
 
 function displayWord() {
-    wordE1.innerHTML = `
-    ${selectedWord
-            .split('')
-            .map(
-                letter => `
-        <span class = "letter">
-        ${corerectLetters.includes(letter) ? letter : ''} 
-        </span>
-        `
-            )
-            .join('')}
-    `;
+    wordE1.innerHTML = `${selectedWord.split('').map(letter => `<span class = "letter">${corerectLetters.includes(letter) ? letter : ''}</span>`).join('')}`;
 
     const innerWord = wordE1.innerText.replace(/\n/g, '');
 
@@ -109,15 +98,15 @@ window.addEventListener('keydown', e => {
 
 // Restart Game and play again
 
-playAgainBtn.addEventListener('click',()=>{
+playAgainBtn.addEventListener('click', () => {
     //Empty Arrays 
     corerectLetters.splice(0);
     wrongletters.splice(0);
-    
+
     selectedWord = words[Math.floor(Math.random() * words.length)];
 
     displayWord();
-    
+
     updateWrongLetterE1();
 
     popup.style.display = 'none';
