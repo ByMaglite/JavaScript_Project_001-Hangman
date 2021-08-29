@@ -2,18 +2,19 @@
 
 const wordE1 = document.getElementById('word');
 const wrongLettersE1 = document.getElementById('wrong-letters');
-const playAgainBtn = document <.getElementById('play-button');
+const playAgainBtn = document.getElementById('play-button');
 const popup = document.getElementById('popup-container');
 const notification = documnet.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
 
-const figureParts = document.querySelectorAll('.figure-parts');
+const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['aplication', 'programing', 'interface', 'wizard'];
+const words = ['aplication', 'programming', 'interface', 'wizard'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const corerectLetters = []
+const corerectLetters = [];
+const wrongLetters = [];
 
 // show hidden word
 
@@ -64,7 +65,7 @@ function updateWrongLetterE1() {
     // Check if lost
 
     if (wrongLetters.length === figureParts.length) {
-        finalMessage.innerText = 'Unfortunately you lost.:(';
+        finalMessage.innerText = 'Unfortunately you lost.';
         popup.style.display = 'flex';
     }
 }
