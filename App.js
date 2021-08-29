@@ -9,7 +9,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['kabaksıddık', 'portlakgoz', 'cırcırbocugu', 'murukefendı','ılaz', "yamuc","kısabacak","ellekmemet"];
+const words = ['clarusway','galatasaray','fullstack','devolopment','wonderfull','football','basketball','snake','snapshot','zucchini'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -19,7 +19,7 @@ const wrongLetters = [];
 // show hidden word
 
 function displayWord() {
-    wordE1.innerHTML = `${selectedWord.split('').map(letter => `<span class = "letter">${corerectLetters.includes(letter) ? letter : ''}</span>`).join('')}`;
+    wordE1.innerHTML = `${selectedWord.split('').map(letter => `<span class = "letter">${correctLetters.includes(letter) ? letter : ''}</span>`).join('')}`;
 
     const innerWord = wordE1.innerText.replace(/\n/g, '');
 
@@ -76,8 +76,8 @@ window.addEventListener('keydown', e => {
         const letter = e.key;
 
         if (selectedWord.includes(letter)) {
-            if (!corerectLetters.includes(letter)) {
-                corerectLetters.push(letter);
+            if (!correctLetters.includes(letter)) {
+                correctLetters.push(letter);
 
                 displayWord();
             } else {
@@ -100,7 +100,7 @@ window.addEventListener('keydown', e => {
 
 playAgainBtn.addEventListener('click', () => {
     //Empty Arrays 
-    corerectLetters.splice(0);
+    correctLetters.splice(0);
     wrongLetters.splice(0);
 
     selectedWord = words[Math.floor(Math.random() * words.length)];
